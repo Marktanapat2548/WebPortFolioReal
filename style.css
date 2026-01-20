@@ -1,0 +1,259 @@
+/* 1. Global Styles - ตั้งค่าพื้นฐาน */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Sarabun', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    padding-top: 70px; /* กันเนื้อหาโดน Header ทับ */
+}
+
+/* 2. Navigation Bar */
+header {
+    background: #ffffff;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2d3436;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #0984e3;
+}
+
+.menu-btn {
+    display: none; /* ซ่อนปุ่มเมนูในหน้าจอคอม */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* 3. Hero Section */
+.hero-section {
+    height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    background: linear-gradient(135deg, #ffffff 0%, #dfe6e9 100%);
+}
+
+.hero-content h3 {
+    font-size: 1.5rem;
+    color: #0984e3;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin: 10px 0;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #0984e3;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.btn:hover {
+    background: #74b9ff;
+    transform: scale(1.05);
+}
+
+.hero-image img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 8px solid #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* 4. Section Commons */
+section {
+    padding: 80px 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    width: 60px;
+    height: 4px;
+    background: #0984e3;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* 5. Skills Grid */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.skill-card {
+    background: #fff;
+    padding: 40px 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: 0.3s;
+}
+
+.skill-card i {
+    font-size: 3.5rem;
+    color: #0984e3;
+    margin-bottom: 15px;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* 6. Work/Portfolio Card */
+.work-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.work-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.work-card:hover {
+    transform: scale(1.02);
+}
+
+.work-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.work-card h3, .work-card p {
+    padding: 10px 20px;
+}
+
+/* 7. Contact & Social Links */
+.social-links {
+    text-align: center;
+}
+
+.social-links img {
+    width: 45px;
+    height: 45px;
+    margin: 0 15px;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.social-links img:hover {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* 8. Footer */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #2d3436;
+    color: #fff;
+}
+
+/* 9. Responsive Design & Hamburger Menu */
+@media (max-width: 768px) {
+    .menu-btn {
+        display: block; /* แสดงปุ่ม ☰ บนมือถือ */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        right: -100%; /* ซ่อนเมนูไว้ทางขวา */
+        width: 100%;
+        height: 100vh;
+        background: #fff;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+        transition: 0.4s;
+    }
+
+    .nav-links.active {
+        right: 0; /* เลื่อนออกมาเมื่อกดปุ่ม */
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        height: auto;
+        padding: 50px 5%;
+    }
+
+    .hero-image img {
+        width: 250px;
+        height: 250px;
+        margin-bottom: 30px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+}
