@@ -1,0 +1,82 @@
+:root {
+    --primary-color: #3498db;
+    --card-bg: #ffffff;
+    --text-color: #333;
+    --price-color: #777;
+    --bg-body: #f4f7f6;
+    --spacing: 20px;
+    --transition-speed: 0.3s;
+}
+
+body {
+    background-color: var(--bg-body);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: var(--spacing);
+}
+
+.product-grid {
+    display: grid;
+    gap: var(--spacing);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+@media (max-width: 599px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 992px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 993px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.product-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    border: 2px solid #e0f2fe;
+    transition: all var(--transition-speed) ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.product-image {
+    width: 80px;
+    height: 80px;
+    background-color: #bdc3c7;
+    margin-bottom: 20px;
+    mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>') no-repeat center;
+    -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>') no-repeat center;
+}
+
+.product-name {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    margin: 10px 0 5px 0;
+}
+
+.product-price {
+    color: var(--price-color);
+    font-size: 0.9rem;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    background-color: #dbeafe;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-color: var(--primary-color);
+}

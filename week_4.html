@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>G Pro X Superlight - Wireless Gaming Mouse</title>
+    <link rel="stylesheet" href="style_week4.css">
+</head>
+<body>
+
+<header>
+    <h1>Advanced Dynamic Product Details Page using HTML5</h1>
+    <nav aria-label="เมนูหลัก">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main itemscope itemtype="http://schema.org/Product">
+    <section class="product-images" aria-label="รูปภาพสินค้า">
+        <figure>
+            <picture>
+                <source srcset="https://resource.logitechg.com/w_694,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight/pro-x-superlight-black-gallery-1.png?v=1" type="image/webp">
+                <img src="https://resource.logitechg.com/w_694,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight/pro-x-superlight-black-gallery-1.png?v=1" alt="เมาส์ G Pro X Superlight สีดำ" itemprop="image">
+            </picture>
+            <figcaption>Logitech G Pro X Superlight เมาส์เกมมิ่งไร้สายที่เบาที่สุดในโลก</figcaption> 
+        </figure>
+
+        <div class="thumbnails">
+            <picture>
+                <img src="https://resource.logitechg.com/w_80,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight/pro-x-superlight-black-gallery-2.png?v=1" alt="G Pro X Superlight มุมมองด้านข้าง">
+            </picture>
+            <picture>
+                <img src="https://resource.logitechg.com/w_80,c_limit,q_auto,f_auto,dpr_1.0/d_transparent.gif/content/dam/gaming/en/products/pro-x-superlight/pro-x-superlight-black-gallery-3.png?v=1" alt="G Pro X Superlight มุมมองด้านล่าง">
+            </picture>
+        </div>
+    </section>
+
+    <section class="product-details">
+        <h2 itemprop="name">Logitech G Pro X Superlight</h2>
+        <p class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+            <span itemprop="priceCurrency" content="THB">฿</span><span itemprop="price">4,990.00</span>
+        </p>
+        
+        <p itemprop="description">
+            ก้าวข้ามทุกขีดจำกัดด้วยเมาส์ที่ออกแบบร่วมกับโปรเพลเยอร์ชั้นนำ 
+            น้ำหนักเบาพิเศษไม่ถึง 63 กรัม พร้อมเซนเซอร์ HERO 25K ที่แม่นยำที่สุด
+        </p>
+
+        <h3>Product Specifications</h3>
+        <dl>
+            <dt>Weight:</dt>
+            <dd>&lt; 63 grams</dd>
+            <dt>Sensor:</dt>
+            <dd>HERO 25K (25,600 DPI)</dd>
+            <dt>Battery:</dt>
+            <dd>ใช้งานได้สูงสุด 70 ชั่วโมง</dd>
+            <dt>Connectivity:</dt>
+            <dd>LIGHTSPEED Wireless</dd>
+        </dl>
+
+        <form aria-label="สั่งซื้อสินค้า">
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity" value="1" min="1" aria-describedby="qty-desc">
+            <span id="qty-desc" class="visually-hidden">ระบุจำนวนที่ต้องการสั่งซื้อ</span>
+            
+            <button type="submit" class="btn-stylish">Add to Basket</button>
+        </form>
+
+        <aside class="related-products">
+            <h3>Related Products</h3>
+            <ul>
+                <li><a href="#">G Pro X Keyboard - คีย์บอร์ดแมคคานิคอลประสิทธิภาพสูง</a></li>
+                <li><a href="#">G Pro X Headset - หูฟังไร้สายระดับโปร</a></li>
+            </ul>
+        </aside>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2026 Gaming Equipment Pro. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

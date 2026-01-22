@@ -1,259 +1,247 @@
-/* 1. Global Styles - ตั้งค่าพื้นฐาน */
+/* นำเข้า Font สวยๆ */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&family=Poppins:wght@400;700&display=swap');
+
+:root {
+    --primary-bg: #0f172a;
+    --accent-color: #3b82f6;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+    --text-main: #ffffff;
+    --text-dim: #94a3b8;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Sarabun', sans-serif;
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: #f4f4f4;
-    color: #333;
+    background: radial-gradient(circle at top right, #3b82f644, transparent),
+                radial-gradient(circle at bottom left, #8b5cf644, transparent),
+                var(--primary-bg);
+    color: var(--text-main);
+    font-family: 'Poppins', 'Kanit', sans-serif;
     line-height: 1.6;
-    padding-top: 70px; /* กันเนื้อหาโดน Header ทับ */
 }
 
-/* 2. Navigation Bar */
-header {
-    background: #ffffff;
-    padding: 1rem 5%;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 8%;
+    background: rgba(15, 23, 42, 0.8);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--glass-border);
 }
 
 .logo {
     font-size: 1.5rem;
-    font-weight: bold;
-    color: #2d3436;
+    font-weight: 700;
+    color: white;
     text-decoration: none;
+    letter-spacing: 1px;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-}
-
-.nav-links li {
-    margin-left: 20px;
+    gap: 30px;
 }
 
 .nav-links a {
+    color: var(--text-dim);
     text-decoration: none;
-    color: #333;
-    font-weight: 500;
-    transition: color 0.3s;
+    font-weight: 400;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
-    color: #0984e3;
+    color: var(--accent-color);
 }
 
+/* --- ส่วนที่เพิ่มใหม่สำหรับ Hamburger Menu --- */
 .menu-btn {
-    display: none; /* ซ่อนปุ่มเมนูในหน้าจอคอม */
-    font-size: 1.5rem;
+    display: none; /* ซ่อนไว้บนจอคอม */
+    font-size: 1.8rem;
     cursor: pointer;
+    color: var(--text-main);
+    z-index: 1001;
 }
 
-/* 3. Hero Section */
+/* Hero Section */
 .hero-section {
-    height: calc(100vh - 70px);
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 0 10%;
-    background: linear-gradient(135deg, #ffffff 0%, #dfe6e9 100%);
-}
-
-.hero-content h3 {
-    font-size: 1.5rem;
-    color: #0984e3;
+    padding-top: 80px;
 }
 
 .hero-content h1 {
-    font-size: 3rem;
-    margin: 10px 0;
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin: 15px 0;
+    background: linear-gradient(to right, #fff, #3b82f6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border: 5px solid var(--glass-border);
+    box-shadow: 0 0 50px rgba(59, 130, 246, 0.3);
+    object-fit: cover;
 }
 
 .btn {
     display: inline-block;
-    padding: 10px 25px;
-    background: #0984e3;
-    color: #fff;
+    padding: 12px 30px;
+    background: var(--accent-color);
+    color: white;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 50px;
+    font-weight: 600;
     margin-top: 20px;
-    transition: transform 0.3s, background 0.3s;
+    transition: 0.3s;
+    box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
 }
 
 .btn:hover {
-    background: #74b9ff;
-    transform: scale(1.05);
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(59, 130, 246, 0.5);
 }
 
-.hero-image img {
-    width: 350px;
-    height: 350px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 8px solid #fff;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-
-/* 4. Section Commons */
+/* Section Common */
 section {
-    padding: 80px 10%;
+    padding: 100px 10%;
 }
 
 .section-title {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     margin-bottom: 50px;
     position: relative;
 }
 
 .section-title::after {
     content: '';
-    width: 60px;
+    display: block;
+    width: 50px;
     height: 4px;
-    background: #0984e3;
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
+    background: var(--accent-color);
+    margin: 10px auto;
+    border-radius: 10px;
 }
 
-/* 5. Skills Grid */
+/* About & Skills Cards */
+.about-container, .skill-card, .work-card {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px;
+    transition: 0.3s;
+}
+
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
 }
 
 .skill-card {
-    background: #fff;
-    padding: 40px 20px;
     text-align: center;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: 0.3s;
 }
 
-.skill-card i {
-    font-size: 3.5rem;
-    color: #0984e3;
-    margin-bottom: 15px;
-}
-
-.skill-card:hover {
+.skill-card:hover, .work-card:hover {
+    background: rgba(255, 255, 255, 0.1);
     transform: translateY(-10px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-/* 6. Work/Portfolio Card */
-.work-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.work-card {
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: 0.3s;
-}
-
-.work-card:hover {
-    transform: scale(1.02);
-}
-
+/* Work Card */
 .work-card img {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    border-radius: 15px;
+    margin-bottom: 20px;
 }
 
-.work-card h3, .work-card p {
-    padding: 10px 20px;
+.work-card a {
+    text-decoration: none;
+    color: inherit;
 }
 
-/* 7. Contact & Social Links */
+/* Contact Social Icons */
 .social-links {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
 }
 
 .social-links img {
-    width: 45px;
-    height: 45px;
-    margin: 0 15px;
+    width: 40px;
+    height: 40px;
     transition: 0.3s;
-    border-radius: 8px;
+    filter: drop-shadow(0 5px 10px rgba(0,0,0,0.3));
 }
 
 .social-links img:hover {
-    transform: rotate(10deg) scale(1.1);
+    transform: scale(1.2);
 }
 
-/* 8. Footer */
 footer {
     text-align: center;
     padding: 40px;
-    background: #2d3436;
-    color: #fff;
+    color: var(--text-dim);
+    border-top: 1px solid var(--glass-border);
 }
 
-/* 9. Responsive Design & Hamburger Menu */
+/* Mobile Responsive ปรับปรุงใหม่ */
 @media (max-width: 768px) {
+    .navbar {
+        padding: 15px 5%;
+    }
+
     .menu-btn {
         display: block; /* แสดงปุ่ม ☰ บนมือถือ */
     }
 
     .nav-links {
+        display: none; /* ซ่อนเมนูเริ่มต้น */
+        flex-direction: column;
         position: absolute;
         top: 100%;
-        right: -100%; /* ซ่อนเมนูไว้ทางขวา */
+        left: 0;
         width: 100%;
-        height: 100vh;
-        background: #fff;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 50px;
-        transition: 0.4s;
+        background: rgba(15, 23, 42, 0.95);
+        backdrop-filter: blur(15px);
+        padding: 30px 0;
+        gap: 20px;
+        text-align: center;
+        border-bottom: 1px solid var(--glass-border);
     }
 
+    /* เมื่อกดปุ่มแล้ว JS จะเพิ่มคลาสนี้เพื่อให้เมนูโผล่มา */
     .nav-links.active {
-        right: 0; /* เลื่อนออกมาเมื่อกดปุ่ม */
-    }
-
-    .nav-links li {
-        margin: 20px 0;
+        display: flex;
     }
 
     .hero-section {
         flex-direction: column-reverse;
         text-align: center;
         height: auto;
-        padding: 50px 5%;
+        padding-top: 120px;
+        padding-bottom: 50px;
     }
-
-    .hero-image img {
-        width: 250px;
-        height: 250px;
-        margin-bottom: 30px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
+    .hero-content h1 { font-size: 2.5rem; }
+    .hero-image img { width: 220px; height: 220px; }
 }

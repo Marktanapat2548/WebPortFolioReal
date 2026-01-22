@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Profile - John Doe</title>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #ffffff;
+        color: #333;
+        margin: 0;
+        padding: 40px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        line-height: 1.6;
+      }
+
+      h1 {
+        font-size: 3rem;
+        margin: 0 0 20px 0;
+        letter-spacing: 5px;
+        text-transform: uppercase;
+      }
+
+      .profile-img-container {
+        width: 180px;
+        height: 180px;
+        border: 1px solid #ddd;
+        border-radius: 50%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+      }
+
+      .profile-img-container img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+
+      h3 {
+        font-size: 1.2rem;
+        margin-top: 30px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      p {
+        max-width: 600px;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #555;
+      }
+
+      ul {
+        list-style: none;
+        padding: 0;
+        text-align: center;
+      }
+
+      ul li {
+        margin-bottom: 5px;
+      }
+
+      .social-links {
+        margin-top: 20px;
+      }
+
+      .social-links a {
+        display: flex; 
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: #0066cc;
+        text-decoration: none;
+        margin: 10px 0;
+        font-size: 1.1rem;
+      }
+
+      .social-links a:hover {
+        text-decoration: underline;
+      }
+
+      li::before {
+        content: "I: ";
+        font-weight: bold;
+      }
+
+      
+      svg {
+        width: 20px;
+        height: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Thanapat Kitsamret</h1>
+
+    <div class="profile-img-container">
+      <img
+        src="https://scontent.furt3-1.fna.fbcdn.net/v/t39.30808-1/380540933_1026356428605382_4437919843606820444_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=108&ccb=1-7&_nc_sid=e99d92&_nc_ohc=pokBlnv1fkUQ7kNvwFQTM88&_nc_oc=AdkMyjfMpRh9OHBEs4hXrIdldbkAk-A-uFD9UHtxkO8LA3hn3ZCduKGbG6IEuTss0IhxUMoVB7FsRGNLfKppUJZ2&_nc_zt=24&_nc_ht=scontent.furt3-1.fna&_nc_gid=ZQs-VuZRqAsDQUb_ie5mdQ&oh=00_Afr3SOIvqVi7OAqSgSzOqJoGFpbjQkMwo9rToFbWkr5pBQ&oe=6975787A"
+        alt="Profile Picture"
+      />
+    </div>
+
+    <h3>About Me</h3>
+    <p>
+      Hello! I'm Mark Thanapat, a passionate web developer with a love for
+      creating user-friendly and visually appealing websites. I enjoy learning
+      new technologies and bring ideas to life through code.
+    </p>
+
+    <h3>My Interests</h3>
+    <ul>
+      <li>🖥️Data</li>
+      <li>🎮Play Valorant Immortal</li>
+      <li>🏀PlayBasketball & Photography📸</li>
+    </ul>
+
+    <h3>Connect With Me</h3>
+    <div class="social-links">
+      <a href="https://www.facebook.com/mark.tanapat.334" target="_blank">
+        <i data-lucide="facebook"></i> https://www.facebook.com/mark.tanapat.334
+      </a>
+      <a href="https://github.com/Marktanapat2548" target="_blank">
+        <i data-lucide="github"></i> https://github.com/Marktanapat2548
+      </a>
+    </div>
+
+    <script>
+      
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Works | 2-Column Layout</title>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #0f172a;
+        }
+
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            min-height: 100vh;
+            background: radial-gradient(circle at top right, #3b82f6, transparent),
+                        var(--bg-deep);
+            font-family: 'Kanit', sans-serif;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .header { text-align: center; margin-bottom: 40px; }
+        h1 { font-size: 3rem; margin: 0; background: linear-gradient(to right, #fff, #94a3b8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+
+        
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); 
+            gap: 20px;
+            width: 100%;
+            max-width: 700px; 
+            margin-bottom: 40px;
+        }
+
+        .card {
+            text-decoration: none;
+            color: white;
+            padding: 25px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        
+        .w1 { background: linear-gradient(135deg, #ff6b6b, #ff8e8e); }
+        .w2 { background: linear-gradient(135deg, #845ef7, #b197fc); }
+        .w3 { background: linear-gradient(135deg, #fcc419, #ffd43b); }
+        .w4 { background: linear-gradient(135deg, #20c997, #63e6be); }
+        .w5 { background: linear-gradient(135deg, #339af0, #74c0fc); }
+        .w6 { background: linear-gradient(135deg, #51cf66, #8ce99a); }
+        .w7 { background: linear-gradient(135deg, #f06595, #faa2c1); }
+        .w8 { background: linear-gradient(135deg, #cc5de8, #e599f7); }
+
+        .btn-group { display: flex; gap: 20px; }
+        .btn {
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            transition: 0.3s;
+        }
+        .btn:hover { background: rgba(255,255,255,0.15); }
+        .btn-gh { background: #fff; color: #000; border: none; }
+
+        
+        @media (max-width: 500px) {
+            .grid-container { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>My Works</h1>
+        <p>ผลงานทั้งหมด 8 สัปดาห์</p>
+    </div>
+
+    <div class="grid-container">
+        <a href="test_week1.html" class="card w1">Week 1 <span>→</span></a>
+        <a href="test_week5.html" class="card w5">Week 5 <span>→</span></a>
+        
+        <a href="test_week2.html" class="card w2">Week 2 <span>→</span></a>
+        <a href="test_week6.html" class="card w6">Week 6 <span>→</span></a>
+        
+        <a href="test_week3.html" class="card w3">Week 3 <span>→</span></a>
+        <a href="test_week7.html" class="card w7">Week 7 <span>→</span></a>
+        
+        <a href="test_week4.html" class="card w4">Week 4 <span>→</span></a>
+        <a href="test_week8.html" class="card w8">Week 8 <span>→</span></a>
+    </div>
+
+    <div class="btn-group">
+        <a href="index.html" class="btn">← Back</a>
+        <a href="https://github.com/Marktanapat2548" class="btn btn-gh">View on GitHub</a>
+    </div>
+
+</body>
+</html>

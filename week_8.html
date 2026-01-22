@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard Challenge</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style_week8.css">
+</head>
+<body>
+    <input type="checkbox" id="menu-toggle">
+
+    <div class="dashboard-container">
+        <header>
+            <div class="header-left">
+                <label for="menu-toggle" class="menu-btn">
+                    <i class="fas fa-bars"></i>
+                </label>
+                <h2>Responsive Dashboard</h2>
+            </div>
+            <div class="theme-switch-wrapper">
+                <i class="fas fa-moon"></i>
+                <button class="theme-btn" id="theme-toggle">Switch Theme</button>
+            </div>
+        </header>
+
+        <aside class="sidebar">
+            <nav>
+                <ul>
+                    <li><a href="#" class="active"><i class="fas fa-th-list"></i> <span>Overview</span></a></li>
+                    <li><a href="#"><i class="fas fa-user"></i> <span>Analytics</span></a></li>
+                    <li><a href="#"><i class="fas fa-star"></i> <span>Reports</span></a></li>
+                    <li><a href="#"><i class="fas fa-bookmark"></i> <span>Reports</span></a></li>
+                    <li><a href="#"><i class="fas fa-rocket"></i> <span>Users</span></a></li>
+                    <li><a href="#"><i class="fas fa-shopping-bag"></i> <span>Settings</span></a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main class="content">
+            <div class="card-grid">
+                <div class="card">
+                    <h3>Statistics</h3>
+                    <div class="stats-container">
+                        <div class="circle-box">
+                            <div class="circle" style="--p:75; --c:#3b82f6;">75%</div>
+                            <span>Revenue</span>
+                        </div>
+                        <div class="circle-box">
+                            <div class="circle" style="--p:40; --c:#10b981;">40%</div>
+                            <span>Orders</span>
+                        </div>
+                        <div class="circle-box">
+                            <div class="circle" style="--p:90; --c:#f59e0b;">90%</div>
+                            <span>Customers</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Sales Graph</h3>
+                    <div class="graph-box">
+                        <div class="graph-svg">
+                            <svg viewBox="0 0 100 40">
+                                <polyline fill="none" stroke="#3b82f6" stroke-width="2" points="0,35 20,25 40,30 60,15 80,20 100,5" />
+                            </svg>
+                        </div>
+                        <div class="graph-labels">
+                            <span>Jan - Jun</span>
+                            <p>Monthly Sales Increase</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>Activity Feed</h3>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <i class="fas fa-user-circle"></i>
+                            <p>John D. added a new report.</p>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-user-circle"></i>
+                            <p>Jane S. updated profile.</p>
+                        </div>
+                        <div class="activity-item">
+                            <i class="fas fa-user-circle"></i>
+                            <p>Team A. created a project</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script_week8.js"></script>
+</body>
+</html>

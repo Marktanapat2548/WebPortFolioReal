@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>User Registration</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f8f9fa;
+            padding: 40px;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        form {
+            display: flex;
+            gap: 30px;
+            max-width: 1000px;
+        }
+
+        fieldset {
+            background-color: #ffffff;
+            border: 1px solid #dee2e6;
+            border-radius: 4px;
+            padding: 25px;
+            flex: 1;
+        }
+
+        legend {
+            font-weight: bold;
+            font-size: 18px;
+            padding: 0 10px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .row label {
+            width: 140px;
+            font-size: 15px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="date"],
+        select {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .gender-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .gender-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .gender-item input {
+            margin: 0;
+        }
+
+        .submit-container {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 8px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>User Registration</h1>
+
+    <form>
+        <fieldset>
+            <legend>Fissbled:</legend>
+            
+            <div class="row">
+                <label for="username">label: Username</label>
+                <input type="text" id="username" name="username">
+            </div>
+
+            <div class="row">
+                <label for="email">label: Email:</label>
+                <input type="email" id="email" name="email" required placeholder="<mail requied">
+            </div>
+
+            <div class="row">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required minlength="8" placeholder="password requried minleuth<8>">
+            </div>
+
+            <div class="row">
+                <label for="confirm">Confirm Password</label>
+                <input type="password" id="confirm" name="confirm" required minlength="8">
+            </div>
+
+            <div class="row">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>Additional Details</legend>
+
+            <div class="row">
+                <label>Label:</label>
+                <input type="text">
+            </div>
+
+            <div class="row" style="align-items: flex-start;">
+                <label>Gender:</label>
+                <div class="gender-options">
+                    <div class="gender-item">
+                        <input type="radio" id="male" name="gender" value="male">
+                        <label for="male">Male</label>
+                    </div>
+                    <div class="gender-item">
+                        <input type="radio" id="female" name="gender" value="female">
+                        <label for="female">Female</label>
+                    </div>
+                    <div class="gender-item">
+                        <input type="radio" id="none" name="gender" value="none">
+                        <label for="none">name gender</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <label for="country">Country</label>
+                <select id="country" name="country">
+                    <option value="th">ไทย</option>
+                    <option value="us">สหรัฐอเมริกา</option>
+                    <option value="jp">ญี่ปุ่น</option>
+                </select>
+            </div>
+            
+            <div class="submit-container">
+                <button type="submit">Submit</button>
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+</html>
